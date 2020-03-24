@@ -40,8 +40,8 @@ make %{?_smp_mflags}
 %install
 %make_install
 
-%post -e /sbin/ldconfig
-%postun -e /sbin/ldconfig
+%post -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files
 %defattr(-,root,root)
