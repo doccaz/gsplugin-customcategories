@@ -34,6 +34,7 @@ This plugin adds custom categories to GNOME Software, based on specific non-stan
 %setup -q
 
 %build
+autoreconf -vfi
 %configure
 make %{?_smp_mflags}
 
