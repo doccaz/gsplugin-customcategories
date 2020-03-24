@@ -9,7 +9,7 @@ This plugin for GNOME Software creates adds programs with custom categories to t
 
 ```bash
 git clone git@github.com:doccaz/gsplugin-customcategories/gsplugin-customcategories.git
-cd autotools-example
+cd gsplugin-customcategories
 ```
 
 **Configuration**
