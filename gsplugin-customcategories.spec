@@ -27,6 +27,7 @@ Source:         %{name}-%{version}.tar.xz
 BuildRequires:  glibc-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	m4
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 %description
