@@ -26,6 +26,7 @@ Url:            https://github.com/doccaz/gsplugin-customcategories.git
 Source:         %{name}-%{version}.tar.xz
 BuildRequires:  glibc-devel
 BuildRequires:	autoconf
+BuildRequires:	autoconf-archive
 BuildRequires:	automake
 BuildRequires:	m4
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
