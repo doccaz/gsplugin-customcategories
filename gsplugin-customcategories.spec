@@ -25,6 +25,7 @@ Group:          System/GUI/GNOME
 Url:            https://github.com/doccaz/gsplugin-customcategories.git
 Source:         %{name}-%{version}.tar.xz
 BuildRequires:  glibc-devel
+BuildRequires:	autoconf
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 %description
