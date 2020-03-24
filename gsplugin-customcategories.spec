@@ -23,12 +23,16 @@ Summary:	Plugin that adds custom categories to GNOME Software
 License:        MIT
 Group:          System/GUI/GNOME
 Url:            https://github.com/doccaz/gsplugin-customcategories.git
-Source:         %{name}-%{version}.tar.xz
+Source0:         %{name}-%{version}.tar.xz
+Source1:	%{name}-rpmlintrc
 BuildRequires:  glibc-devel
 BuildRequires:	autoconf
-BuildRequires:	autoconf-archive
+BuildRequires:	pkg-config
+BuildRequires:	libtool
 BuildRequires:	automake
 BuildRequires:	m4
+BuildRequires:	gcc-c++
+BuildRequires:	pkgconfig(gnome-software)
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 %description
