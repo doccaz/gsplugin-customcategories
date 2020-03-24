@@ -26,5 +26,20 @@ typedef struct {
 
 const GsDesktopData     *gs_desktop_get_data            (void);
 
+struct _GsCategory
+{       
+        GObject          parent_instance;
+        
+        gchar           *id;
+        gchar           *name;
+        gchar           *icon;
+        gint             score;
+        GPtrArray       *key_colors;
+        GPtrArray       *desktop_groups;
+        GsCategory      *parent;
+        guint            size;
+        GPtrArray       *children;
+};
+
 G_END_DECLS
 

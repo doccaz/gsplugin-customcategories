@@ -18,6 +18,6 @@ LT_INIT([dlopen shared])
 AC_CONFIG_FILES([Makefile include/Makefile src/Makefile])
 
 PKG_CHECK_MODULES([GS], [gnome-software], [], [AC_MSG_ERROR([Please install gnome-software-devel!])])
-AC_SUBST(libdir, [[$(pkg-config gnome-software --variable=plugindir)]])
+AC_SUBST(libdir, [[$(pkg-config gnome-software --prefix-variable=$$prefix --variable=plugindir)]])
 AC_OUTPUT
 
