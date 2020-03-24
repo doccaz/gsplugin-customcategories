@@ -1,0 +1,23 @@
+<services>
+ 
+  <!-- https://github.com/openSUSE/obs-service-tar_scm -->
+  <service name="tar_scm">
+    <param name="url">https://github.com/doccaz/gsplugin-customcategories.git</param>
+    <param name="scm">git</param>
+    <param name="filename">gsplugin-customcategories</param>
+    <param name="exclude">.git</param>
+    <param name="versionformat">@PARENT_TAG@</param>
+    <param name="revision">1.0</param>
+    <param name="changesgenerate">enable</param>
+  </service>
+ 
+  <service name="recompress">
+    <param name="file">*.tar</param>
+    <param name="compression">xz</param>
+  </service>
+
+  <service name="set_version">
+	<param name="file">gsplugin-customcategories.spec</param>
+  </service>
+ 
+</services>
