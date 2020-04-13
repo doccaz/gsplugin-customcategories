@@ -32,6 +32,7 @@ void gs_plugin_initialize(GsPlugin *plugin)
   gs_plugin_add_rule (plugin, GS_PLUGIN_RULE_CONFLICTS, "shell-extensions");
 
   fprintf(stdout, "[customcategories] Initializing plug-in\n");
+  fprintf(stdout, "[customcategories] fwupd and shell-extensions disabled, as they conflict with us\n");
 }
 
 
