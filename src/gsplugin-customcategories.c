@@ -27,6 +27,10 @@ _gs_desktop_get_data(void)
 void gs_plugin_initialize(GsPlugin *plugin)
 {
   gs_plugin_add_rule(plugin, GS_PLUGIN_RULE_RUN_BEFORE, "appstream");
+  gs_plugin_add_rule (plugin, GS_PLUGIN_RULE_CONFLICTS, "fwupd");
+//   gs_plugin_add_rule (plugin, GS_PLUGIN_RULE_CONFLICTS, "packagekit-refine");
+  gs_plugin_add_rule (plugin, GS_PLUGIN_RULE_CONFLICTS, "shell-extensions");
+
   fprintf(stdout, "[customcategories] Initializing plug-in\n");
 }
 
