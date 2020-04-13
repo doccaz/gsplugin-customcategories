@@ -33,6 +33,7 @@ BuildRequires:	automake
 BuildRequires:	m4
 BuildRequires:	gcc-c++
 BuildRequires:	pkgconfig(gnome-software)
+BuildRequires:	pkgconfig(ostree-1-1)
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 %description
