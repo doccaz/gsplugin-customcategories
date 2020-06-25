@@ -14,6 +14,7 @@ rm -rf aux-dist/
 rm -rf m4/
 rm -rf src/.deps
 rm -rf src/.libs
+rm -f src/*.o
 rm -f src/*.lo
 rm -f src/*.la
 rm -rf src/libtool

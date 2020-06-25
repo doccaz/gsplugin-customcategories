@@ -15,7 +15,7 @@ static const GsDesktopMap map_bb[] = {
 /* Please keep category name and subcategory context synchronized!!! */
 static const GsDesktopData msdata[] = {
     {"bancodobrasil", map_bb, "Banco do Brasil",
-     "bb", "#fee50c", 100},
+     "customcategoryicon", "#fee50c", 100},
     {NULL}};
 
 const GsDesktopData *
