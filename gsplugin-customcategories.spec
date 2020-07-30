@@ -33,7 +33,7 @@ BuildRequires:	automake
 BuildRequires:	m4
 BuildRequires:	gcc-c++
 BuildRequires:	pkgconfig(gnome-software)
-BuildRequires:	ostree-devel
+BuildRequires:	pkgconfig(ostree-1)
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 %description
@@ -41,11 +41,11 @@ This plugin adds custom categories to GNOME Software, based on specific non-stan
 
 %prep
 %setup -q
+# FIXME gnome-software.h in SLE15SP2 references a non-existant include!
+echo "workaround"
+sed -i '/gs-app-collation/d' /usr/include/gnome-software/gnome-software.h
 
 %build
-# FIXME gnome-software.h in SLE15SP2 (3.34-2) references a non-existant include!
-sed -i /gs-app-collation/d /usr/include/gnome-software/gnome-software.h
-
 autoreconf -vfi
 %configure
 make %{?_smp_mflags}
