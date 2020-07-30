@@ -43,6 +43,9 @@ This plugin adds custom categories to GNOME Software, based on specific non-stan
 %setup -q
 
 %build
+# FIXME gnome-software.h in SLE15SP2 (3.34-2) references a non-existant include!
+sed -i /gs-app-collation/d /usr/include/gnome-software/gnome-software.h
+
 autoreconf -vfi
 %configure
 make %{?_smp_mflags}
